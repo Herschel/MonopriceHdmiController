@@ -1,5 +1,7 @@
 # Monoprice HDMI Controller
 
+[![Build Status](https://travis-ci.org/Herschel/MonopriceHdmiController.svg?branch=master)](https://travis-ci.org/Herschel/MonopriceHdmiController)
+
 A Windows application for controlling the [Monoprice 8x1 Enhanced Powered HDMI Switcher](https://www.monoprice.com/product?p_id=4067) over RS-232.
 
 I have not tested this with other brands or models of HDMI switch. The serial communication specs for this HDMI switch are found in the [Monoprice support database](http://support.monoprice.com/link/portal/41053/41056/Article/233/What-are-the-RS-232-commands-for-the-8X1-Enhanced-Powered-HDMI-Switcher-w-Remote-PID-4067).
