@@ -17,5 +17,5 @@ I have not tested this with other brands or models of HDMI switch. The serial co
  - Clear all hotkeys for an HDMI input by clicking the - button.
  - Use the Delay setting to delay input changes by the specified number of milliseconds. This is useful if you need to hide the change behind a transition.
 
-# Licesnse
+# License
 This application is licensed under the [MIT License](https://opensource.org/licenses/MIT). See LICENSE.MD for the complete license.
