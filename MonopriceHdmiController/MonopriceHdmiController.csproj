@@ -54,6 +54,12 @@
     <Compile Include="HdmiInput.Designer.cs">
       <DependentUpon>HdmiInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="HdmiSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HdmiSwitch.Designer.cs">
+      <DependentUpon>HdmiSwitch.cs</DependentUpon>
+    </Compile>
     <Compile Include="HotKeyManager.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -65,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="HdmiInput.resx">
       <DependentUpon>HdmiInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HdmiSwitch.resx">
+      <DependentUpon>HdmiSwitch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

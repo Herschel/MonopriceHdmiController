@@ -30,34 +30,69 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.portComboBox = new System.Windows.Forms.ComboBox();
-            this.portLabel = new System.Windows.Forms.Label();
-            this.delayStepper = new System.Windows.Forms.NumericUpDown();
             this.changeInputTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblChangeDelay = new System.Windows.Forms.Label();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.inputsTable = new System.Windows.Forms.TableLayoutPanel();
+            this.hdmiSwitchTabs = new System.Windows.Forms.TabControl();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.newSwitchButton = new System.Windows.Forms.Button();
+            this.deleteSwitchButton = new System.Windows.Forms.Button();
+            this.lblChangeDelay = new System.Windows.Forms.Label();
+            this.delayStepper = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.delayStepper)).BeginInit();
             this.SuspendLayout();
             // 
-            // portComboBox
+            // changeInputTimer
             // 
-            this.portComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.portComboBox.FormattingEnabled = true;
-            this.portComboBox.Location = new System.Drawing.Point(72, 10);
-            this.portComboBox.Name = "portComboBox";
-            this.portComboBox.Size = new System.Drawing.Size(120, 33);
-            this.portComboBox.TabIndex = 1;
-            this.portComboBox.SelectedIndexChanged += new System.EventHandler(this.portComboBox_SelectedIndexChanged);
+            this.changeInputTimer.Interval = 1;
+            this.changeInputTimer.Tick += new System.EventHandler(this.changeInputTimer_Tick);
             // 
-            // portLabel
+            // notifyIcon
             // 
-            this.portLabel.AutoSize = true;
-            this.portLabel.Location = new System.Drawing.Point(10, 13);
-            this.portLabel.Name = "portLabel";
-            this.portLabel.Size = new System.Drawing.Size(57, 25);
-            this.portLabel.TabIndex = 2;
-            this.portLabel.Text = "Port:";
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "HDMI Controller";
+            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            // 
+            // hdmiSwitchTabs
+            // 
+            this.hdmiSwitchTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hdmiSwitchTabs.Location = new System.Drawing.Point(12, 12);
+            this.hdmiSwitchTabs.Name = "hdmiSwitchTabs";
+            this.hdmiSwitchTabs.SelectedIndex = 0;
+            this.hdmiSwitchTabs.Size = new System.Drawing.Size(355, 480);
+            this.hdmiSwitchTabs.TabIndex = 0;
+            // 
+            // newSwitchButton
+            // 
+            this.newSwitchButton.Location = new System.Drawing.Point(12, 541);
+            this.newSwitchButton.Name = "newSwitchButton";
+            this.newSwitchButton.Size = new System.Drawing.Size(98, 23);
+            this.newSwitchButton.TabIndex = 1;
+            this.newSwitchButton.Text = "New Switch";
+            this.newSwitchButton.UseVisualStyleBackColor = true;
+            this.newSwitchButton.Click += new System.EventHandler(this.newSwitchButton_Click);
+            // 
+            // deleteSwitchButton
+            // 
+            this.deleteSwitchButton.Location = new System.Drawing.Point(214, 541);
+            this.deleteSwitchButton.Name = "deleteSwitchButton";
+            this.deleteSwitchButton.Size = new System.Drawing.Size(130, 23);
+            this.deleteSwitchButton.TabIndex = 2;
+            this.deleteSwitchButton.Text = "Delete Switch";
+            this.deleteSwitchButton.UseVisualStyleBackColor = true;
+            this.deleteSwitchButton.Click += new System.EventHandler(this.deleteSwitchButton_Click);
+            // 
+            // lblChangeDelay
+            // 
+            this.lblChangeDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblChangeDelay.AutoSize = true;
+            this.lblChangeDelay.Location = new System.Drawing.Point(34, 507);
+            this.lblChangeDelay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblChangeDelay.Name = "lblChangeDelay";
+            this.lblChangeDelay.Size = new System.Drawing.Size(80, 17);
+            this.lblChangeDelay.TabIndex = 33;
+            this.lblChangeDelay.Text = "Delay (ms):";
             // 
             // delayStepper
             // 
@@ -67,64 +102,33 @@
             0,
             0,
             0});
-            this.delayStepper.Location = new System.Drawing.Point(364, 10);
+            this.delayStepper.Location = new System.Drawing.Point(118, 505);
+            this.delayStepper.Margin = new System.Windows.Forms.Padding(2);
             this.delayStepper.Maximum = new decimal(new int[] {
             5000,
             0,
             0,
             0});
             this.delayStepper.Name = "delayStepper";
-            this.delayStepper.Size = new System.Drawing.Size(120, 31);
-            this.delayStepper.TabIndex = 4;
+            this.delayStepper.Size = new System.Drawing.Size(80, 22);
+            this.delayStepper.TabIndex = 32;
             this.delayStepper.ValueChanged += new System.EventHandler(this.delayStepper_ValueChanged);
-            // 
-            // changeInputTimer
-            // 
-            this.changeInputTimer.Interval = 1;
-            this.changeInputTimer.Tick += new System.EventHandler(this.changeInputTimer_Tick);
-            // 
-            // lblChangeDelay
-            // 
-            this.lblChangeDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblChangeDelay.AutoSize = true;
-            this.lblChangeDelay.Location = new System.Drawing.Point(238, 13);
-            this.lblChangeDelay.Name = "lblChangeDelay";
-            this.lblChangeDelay.Size = new System.Drawing.Size(121, 25);
-            this.lblChangeDelay.TabIndex = 11;
-            this.lblChangeDelay.Text = "Delay (ms):";
-            // 
-            // notifyIcon
-            // 
-            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "HDMI Controller";
-            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
-            // 
-            // inputsTable
-            // 
-            this.inputsTable.AutoSize = true;
-            this.inputsTable.ColumnCount = 1;
-            this.inputsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.inputsTable.Location = new System.Drawing.Point(0, 53);
-            this.inputsTable.Name = "inputsTable";
-            this.inputsTable.RowCount = 1;
-            this.inputsTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.inputsTable.Size = new System.Drawing.Size(494, 0);
-            this.inputsTable.TabIndex = 0;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(494, 829);
-            this.Controls.Add(this.inputsTable);
+            this.ClientSize = new System.Drawing.Size(379, 584);
             this.Controls.Add(this.lblChangeDelay);
             this.Controls.Add(this.delayStepper);
-            this.Controls.Add(this.portLabel);
-            this.Controls.Add(this.portComboBox);
+            this.Controls.Add(this.deleteSwitchButton);
+            this.Controls.Add(this.newSwitchButton);
+            this.Controls.Add(this.hdmiSwitchTabs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "HDMI Controller";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -137,12 +141,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox portComboBox;
-        private System.Windows.Forms.Label portLabel;
         private System.Windows.Forms.Timer changeInputTimer;
-        private System.Windows.Forms.Label lblChangeDelay;
         private System.Windows.Forms.NotifyIcon notifyIcon;
-        private System.Windows.Forms.TableLayoutPanel inputsTable;
+        private System.Windows.Forms.TabControl hdmiSwitchTabs;
+        private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Button newSwitchButton;
+        private System.Windows.Forms.Button deleteSwitchButton;
+        private System.Windows.Forms.Label lblChangeDelay;
         private System.Windows.Forms.NumericUpDown delayStepper;
     }
 }

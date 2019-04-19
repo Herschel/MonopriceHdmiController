@@ -36,9 +36,10 @@
             // 
             // selectInputButton
             // 
-            this.selectInputButton.Location = new System.Drawing.Point(10, 10);
+            this.selectInputButton.Location = new System.Drawing.Point(7, 6);
+            this.selectInputButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.selectInputButton.Name = "selectInputButton";
-            this.selectInputButton.Size = new System.Drawing.Size(120, 44);
+            this.selectInputButton.Size = new System.Drawing.Size(80, 28);
             this.selectInputButton.TabIndex = 0;
             this.selectInputButton.Text = "Input";
             this.selectInputButton.UseVisualStyleBackColor = true;
@@ -48,19 +49,21 @@
             // 
             this.hotKeysText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.hotKeysText.Location = new System.Drawing.Point(140, 14);
+            this.hotKeysText.Location = new System.Drawing.Point(93, 9);
+            this.hotKeysText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.hotKeysText.Name = "hotKeysText";
             this.hotKeysText.ReadOnly = true;
-            this.hotKeysText.Size = new System.Drawing.Size(200, 31);
+            this.hotKeysText.Size = new System.Drawing.Size(135, 22);
             this.hotKeysText.TabIndex = 1;
             this.hotKeysText.Text = "<no shortcut>";
             // 
             // addHotKeyButton
             // 
             this.addHotKeyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addHotKeyButton.Location = new System.Drawing.Point(350, 10);
+            this.addHotKeyButton.Location = new System.Drawing.Point(233, 6);
+            this.addHotKeyButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addHotKeyButton.Name = "addHotKeyButton";
-            this.addHotKeyButton.Size = new System.Drawing.Size(44, 44);
+            this.addHotKeyButton.Size = new System.Drawing.Size(29, 28);
             this.addHotKeyButton.TabIndex = 2;
             this.addHotKeyButton.Text = "+";
             this.addHotKeyButton.UseVisualStyleBackColor = true;
@@ -69,9 +72,10 @@
             // clearHotKeysButton
             // 
             this.clearHotKeysButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clearHotKeysButton.Location = new System.Drawing.Point(404, 10);
+            this.clearHotKeysButton.Location = new System.Drawing.Point(269, 6);
+            this.clearHotKeysButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.clearHotKeysButton.Name = "clearHotKeysButton";
-            this.clearHotKeysButton.Size = new System.Drawing.Size(44, 44);
+            this.clearHotKeysButton.Size = new System.Drawing.Size(29, 28);
             this.clearHotKeysButton.TabIndex = 3;
             this.clearHotKeysButton.Text = "-";
             this.clearHotKeysButton.UseVisualStyleBackColor = true;
@@ -79,15 +83,16 @@
             // 
             // HdmiInput
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.clearHotKeysButton);
             this.Controls.Add(this.addHotKeyButton);
             this.Controls.Add(this.hotKeysText);
             this.Controls.Add(this.selectInputButton);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "HdmiInput";
-            this.Size = new System.Drawing.Size(458, 64);
+            this.Size = new System.Drawing.Size(305, 41);
             this.ResumeLayout(false);
             this.PerformLayout();
 
